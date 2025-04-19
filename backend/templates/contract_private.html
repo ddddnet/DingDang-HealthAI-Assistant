@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy</title>
+    <style>
+        .lang-switcher {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+        .lang-switcher button {
+            padding: 5px 10px;
+            border: 1px solid #ccc;
+            background: #fff;
+            cursor: pointer;
+        }
+        .lang-switcher button.active {
+            background: #007bff;
+            color: white;
+        }
+        [lang="zh-CN"] {
+            display: none;
+        }
+    </style>
+    <script>
+        function switchLanguage(lang) {
+            document.documentElement.lang = lang;
+            document.querySelectorAll('[lang]').forEach(el => {
+                el.style.display = el.lang === lang ? 'block' : 'none';
+            });
+            document.querySelectorAll('.lang-switcher button').forEach(btn => {
+                btn.classList.toggle('active', btn.dataset.lang === lang);
+            });
+        }
+        document.addEventListener('DOMContentLoaded', () => {
+            switchLanguage('en');
+        });
+    </script>
+</head>
+<body>
+    <div class="lang-switcher">
+        <button data-lang="en" onclick="switchLanguage('en')">English</button>
+        <button data-lang="zh-CN" onclick="switchLanguage('zh-CN')">中文</button>
+    </div>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 2rem;
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        p {
+            margin: 1rem 0;
+        }
+        .section {
+            margin-bottom: 2rem;
+        }
+        .note {
+            color: #666;
+            font-style: italic;
+        }
+        .example {
+            background: #f5f5f5;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div lang="en">
+        <h1>Privacy Policy</h1>
+        <p>Last updated: January 17, 2025</p>
+
+        <div class="section">
+            <h2>1. Data Collection Scenarios</h2>
+            <h3>1.1 Registration and Login</h3>
+            <p>Information collected: phone number, password, nickname. Phone number is used for account registration and identity verification, password is used to protect account security, and nickname is used to display user identity on the platform.</p>
+
+            <h3>1.2 Health Data Recording</h3>
+            <p>Information collected:</p>
+            <ul>
+                <li>Food photos and analysis results: Users upload food photos, and we use AI technology to identify food types and nutritional components in the photos.</li>
+                <li>Exercise data: Users can record their exercise data by connecting smart devices (such as fitness trackers, smart watches) or manual input.</li>
+                <li>Weight records: Users can regularly upload weight photos or manually input weight data.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div lang="zh-CN">
+        <h1>隐私政策</h1>
+        <p>最后更新日期：2025年1月17日</p>
+
+        <div class="section">
+            <h2>一、数据收集场景</h2>
+            <h3>1.1 注册与登录</h3>
+            <p>收集信息：手机号、密码、昵称。手机号用于账号注册和身份验证，密码用于保护账号安全，昵称用于在平台上展示用户身份。</p>
+
+            <h3>1.2 健康数据记录</h3>
+            <p>收集信息：</p>
+            <ul>
+                <li>食物照片及分析结果：用户上传食物照片，我们将使用AI技术识别照片中的食物种类和营养成分。</li>
+                <li>运动数据：用户可以通过连接智能设备（如运动手环、智能手表等）或手动输入的方式，记录自己的运动数据。</li>
+                <li>体重记录：用户可以定期上传体重照片或手动输入体重数据。</li>
+            </ul>
+        </div>
+    </div>
+
+    <div lang="en">
+        <div class="section">
+            <h2>2. Data Storage and Protection</h2>
+            <h3>2.1 Storage Duration</h3>
+            <p>User data storage duration:</p>
+            <ul>
+                <li>Account information: Until account deletion. We will retain account information until the user actively deletes their account. After deletion, we will delete or anonymize the account information according to relevant laws and regulations.</li>
+                <li>Health data: Retained by default. To facilitate long-term health management and analysis, we will retain health data by default. Users can choose to extend or shorten the retention period based on their needs.</li>
+                <li>Log information: Retained by default. We will retain log information for system maintenance, troubleshooting, and security audits. After 6 months, we will delete or anonymize log information according to relevant laws and regulations.</li>
+            </ul>
+
+            <h3>2.2 Security Measures</h3>
+            <p>We implement the following security measures:</p>
+            <ul>
+                <li>Regular security audits: We conduct regular security audits to check system security and compliance. Audits include vulnerability scanning, code review, and permission management to identify and fix security issues.</li>
+                <li>Employee confidentiality agreements: All employees are required to sign confidentiality agreements to ensure they do not disclose any user data or information. The agreements specify confidentiality obligations and breach consequences.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div lang="zh-CN">
+        <div class="section">
+            <h2>二、数据存储与保护</h2>
+            <h3>2.1 存储期限</h3>
+            <p>用户数据存储期限：</p>
+            <ul>
+                <li>账户信息：直至用户注销。我们将一直保存用户的账户信息，直到用户主动注销账户。注销后，我们将按照相关法律法规的要求，删除或匿名化处理用户的账户信息。</li>
+                <li>健康数据：默认保留。为了便于用户进行长期的健康管理和分析，我们将默认保留用户的健康数据。用户可以根据自己的需求，选择延长或缩短数据的保留期限。</li>
+                <li>日志信息：默认保留。我们将保留用户的日志信息，以便进行系统维护、故障排查和安全审计等工作。6个月后，我们将按照相关法律法规的要求，删除或匿名化处理用户的日志信息。</li>
+            </ul>
+
+            <h3>2.2 安全措施</h3>
+            <p>我们采取以下安全措施：</p>
+            <ul>
+                <li>定期安全审计：我们定期对系统进行安全审计，检查系统的安全性和合规性。安全审计包括对系统的漏洞扫描、代码审查、权限管理等方面的检查，及时发现和修复安全隐患。</li>
+                <li>员工保密协议：我们要求所有员工签署保密协议，确保员工不会泄露用户的任何数据和信息。员工保密协议规定了员工的保密义务、违约责任等内容，对员工的行为进行约束和规范。</li>
+            </ul>
+        </div>
+    </div>
+
+    <div lang="en">
+        <div class="section">
+            <h2>3. Data Security Incident Handling</h2>
+            <p>3.1 In case of data breaches or other security incidents, we will:</p>
+            <ol>
+                <li>Report to regulatory authorities within 72 hours: We will report the incident details to relevant authorities, including the time of occurrence, scope of impact, and potential losses.</li>
+                <li>Notify affected users promptly: We will promptly notify affected users about the data breach, its potential impact, and the remedial measures we have taken. Notifications will be sent via email, SMS, or in-app messages.</li>
+                <li>Take remedial actions: We will immediately take actions to prevent further damage, including suspending services, fixing vulnerabilities, and enhancing security measures to restore normal operations.</li>
+            </ol>
+            <p>3.2 Users can report security issues to banznx@qq.com.</p>
+        </div>
+    </div>
+
+    <div lang="zh-CN">
+        <div class="section">
+            <h2>三、数据安全事件处理</h2>
+            <p>3.1 如发生数据泄露等安全事件，我们将：</p>
+            <ol>
+                <li>72小时内向监管部门报告：我们将在发现数据泄露等安全事件后，向相关监管部门报告事件的详细情况，包括事件的发生时间、影响范围、可能造成的损失等。</li>
+                <li>及时通知受影响用户：我们将及时通知受影响用户，告知用户数据泄露的情况、可能造成的影响以及我们采取的补救措施等。通知方式包括邮件、短信、站内信等，确保用户能够及时了解事件的进展情况。</li>
+                <li>采取补救措施：我们将立即采取补救措施，防止数据泄露事件的进一步扩大和恶化。补救措施包括但不限于暂停服务、修复漏洞、加强安全防护等，尽快恢复系统的正常运行。</li>
+            </ol>
+            <p>3.2 用户可通过banznx@qq.com报告安全问题。</p>
+        </div>
+    </div>
+
+    <div lang="en">
+        <div class="section">
+            <h2>4. Children's Privacy Protection</h2>
+            <p>4.1 This service is not intended for children under 14 years old. Our service is primarily for adults and is not suitable for children under 14. If we find that a child under 14 is using our service, we will immediately stop providing services to them and delete their information.</p>
+            <p>4.2 If you find a child using our service, please contact us immediately to delete the relevant information. If you discover a child using our service, please contact us immediately, and we will promptly delete the relevant user information to ensure the child's privacy.</p>
+        </div>
+
+        <div class="section">
+            <h2>5. User Rights</h2>
+            <p>5.1 Users have the following rights:</p>
+            <ul>
+                <li>Access and modify personal information: Users have the right to access and modify their personal information at any time. Users can log in to their account and view/modify their personal information in the "Personal Center" or "Settings" page.</li>
+                <li>Withdraw data usage consent: Users have the right to withdraw their consent for us to use their data at any time. Users can contact our customer service or use the "Personal Center" or "Settings" page to withdraw consent.</li>
+                <li>Delete account and data: Users have the right to delete their account and related data at any time. Users can contact our customer service or use the "Personal Center" or "Settings" page to delete their account and data.</li>
+                <li>Obtain data copy: Users have the right to obtain a copy of their data at any time. Users can contact our customer service or use the "Personal Center" or "Settings" page to request a data copy.</li>
+            </ul>
+            <p>5.2 Users can exercise these rights by contacting banznx@qq.com.</p>
+        </div>
+
+        <p>For any questions, please contact: banznx@qq.com</p>
+    </div>
+
+    <div lang="zh-CN">
+        <div class="section">
+            <h2>四、儿童隐私保护</h2>
+            <p>4.1 本服务不面向14岁以下儿童。我们的服务主要面向成年人，不适合14岁以下的儿童使用。如果我们发现有14岁以下的儿童使用我们的服务，我们将立即停止为其提供服务，并删除相关的用户信息。</p>
+            <p>4.2 如发现儿童使用本服务，请立即联系我们删除相关信息。如果您发现有儿童使用我们的服务，请立即联系我们，我们将尽快删除相关的用户信息，确保儿童的隐私安全。</p>
+        </div>
+
+        <div class="section">
+            <h2>五、用户权利</h2>
+            <p>5.1 用户享有以下权利：</p>
+            <ul>
+                <li>查询、修改个人信息：用户有权随时查询和修改自己的个人信息。用户可以登录自己的账户，在“个人中心”或“设置”页面中，查看和修改自己的个人信息，如手机号、密码、昵称等。</li>
+                <li>撤回数据使用授权：用户有权随时撤回我们对其数据的使用授权。用户可以通过联系我们的客服人员，或在“个人中心”或“设置”页面中，选择撤回数据使用授权。撤回授权后，我们将停止使用用户的数据，并删除相关的数据。</li>
+                <li>删除账户及数据：用户有权随时删除自己的账户及相关数据。用户可以通过联系我们的客服人员，或在“个人中心”或“设置”页面中，选择删除账户及数据。删除账户后，我们将按照相关法律法规的要求，删除或匿名化处理用户的所有数据。</li>
+                <li>获取数据副本：用户有权随时获取自己的数据副本。用户可以通过联系我们的客服人员，或在“个人中心”或“设置”页面中，选择获取数据副本。我们将在收到用户的请求后，尽快为用户提供数据副本。</li>
+            </ul>
+            <p>5.2 用户可通过banznx@qq.com行使上述权利。</p>
+        </div>
+
+        <p>如有疑问，请联系：banznx@qq.com</p>
+    </div>
+</body>
+</html>

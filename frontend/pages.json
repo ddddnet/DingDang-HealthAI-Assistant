@@ -1,0 +1,112 @@
+{
+	"pages": [{
+			"path": "pages/index/index",
+			"style": {
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/index1/index1",
+			"style": {
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/index2/index2",
+			"style": {
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/login/login",
+			"style": {
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/home/home",
+			"style": {
+				"navigationStyle": "default",
+				"navigationBarTitleText": "打卡",
+				"navigationBarTextStyle": "black",
+				"navigationBarBackgroundColor": "#ffffff"
+			}
+		},
+		{
+			"path": "pages/anaylse/anaylse",
+			"style": {
+				"navigationStyle": "default",
+				"navigationBarTitleText": "分析",
+				"navigationBarTextStyle": "black",
+				"navigationBarBackgroundColor": "#ffffff",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/my/my",
+			"style": {
+				"navigationStyle": "default",
+				"navigationBarTitleText": "我的",
+				"navigationBarTextStyle": "black",
+				"navigationBarBackgroundColor": "#ffffff"
+			}
+		},
+		{
+			"path": "pages/my/my-info-form",
+			"style": {
+				"navigationBarTitleText": "个人信息完善"
+			}
+		},
+		{
+			"path" : "pages/my/my-info",
+			"style" : 
+			{
+				"navigationBarTitleText" : ""
+			}
+		},
+		{
+			"path" : "pages/test/test",
+			"style" : 
+			{
+				"navigationBarTitleText" : ""
+			}
+		},
+		{
+			"path" : "pages/webview/webview",
+			"style" : 
+			{
+				"navigationBarTitleText" : ""
+			}
+		}
+	],
+	"globalStyle": {
+		"navigationStyle": "default"
+
+	},
+	"uniIdRouter": {},
+	"tabBar": {
+		"color": "#969BAB", // 文字默认颜色
+		"selectedColor": "#FF89BB", // 文字选中颜色
+		"backgroundColor": "#ffffff", // 背景颜色
+		"borderStyle": "black", // 边框颜色
+		"list": [{
+				"pagePath": "pages/home/home",
+				"text": "打卡",
+				"iconPath": "static/tabbar/home.png",
+				"selectedIconPath": "/static/tabbar/home-t.png"
+			},
+			{
+				"pagePath": "pages/anaylse/anaylse",
+				"text": "分析",
+				"iconPath": "static/tabbar/any.png",
+				"selectedIconPath": "/static/tabbar/any-t.png"
+			},
+			{
+				"pagePath": "pages/my/my",
+				"text": "我的",
+				"iconPath": "static/tabbar/my.png",
+				"selectedIconPath": "/static/tabbar/my-t.png"
+			}
+		]
+	}
+}

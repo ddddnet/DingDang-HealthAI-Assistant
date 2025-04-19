@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service</title>
+    <style>
+        .lang-switcher {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+        .lang-switcher button {
+            padding: 5px 10px;
+            border: 1px solid #ccc;
+            background: #fff;
+            cursor: pointer;
+        }
+        .lang-switcher button.active {
+            background: #007bff;
+            color: white;
+        }
+        [lang="zh-CN"] {
+            display: none;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 2rem;
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        p {
+            margin: 1rem 0;
+        }
+        .section {
+            margin-bottom: 2rem;
+        }
+        .note {
+            color: #666;
+            font-style: italic;
+        }
+        .example {
+            background: #f5f5f5;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 4px;
+        }
+    </style>
+    <script>
+        function switchLanguage(lang) {
+            document.documentElement.lang = lang;
+            document.querySelectorAll('[lang]').forEach(el => {
+                el.style.display = el.lang === lang ? 'block' : 'none';
+            });
+            document.querySelectorAll('.lang-switcher button').forEach(btn => {
+                btn.classList.toggle('active', btn.dataset.lang === lang);
+            });
+        }
+        document.addEventListener('DOMContentLoaded', () => {
+            switchLanguage('en');
+        });
+    </script>
+</head>
+<body>
+    <div class="lang-switcher">
+        <button data-lang="en" onclick="switchLanguage('en')">English</button>
+        <button data-lang="zh-CN" onclick="switchLanguage('zh-CN')">中文</button>
+    </div>
+    <div lang="en">
+        <h1>Terms of Service</h1>
+        <p>Last updated: January 17, 2025</p>
+
+        <div class="section">
+            <h2>1. Account Management</h2>
+            <h3>1.1 Account Registration</h3>
+            <p>Users need to provide the following information to complete registration:</p>
+            <ul>
+                <li>Valid phone number: Must be a currently active number owned by the user, used for receiving verification codes and account security verification.</li>
+                <li>Set login password: Password should contain letters, numbers and special characters, with a minimum length of 8 characters to ensure account security.</li>
+                <li>Basic personal information (nickname, gender, etc.): Nickname is used to display user identity on the platform, while gender helps us provide more personalized services.</li>
+            </ul>
+
+            <h3>1.2 Account Deletion</h3>
+            <p>If users wish to delete their account, please contact customer service. Our team will assist with the account deletion process.</p>
+            <p class="note">Note: All data will be permanently deleted and cannot be recovered after account deletion. This includes all personal information, check-in records, AI analysis data, etc. Please proceed with caution.</p>
+        </div>
+    </div>
+
+    <div lang="zh-CN">
+        <h1>用户协议</h1>
+        <p>最后更新日期：2025年1月17日</p>
+
+        <div class="section">
+            <h2>一、账户管理</h2>
+            <h3>1.1 账户注册</h3>
+            <p>用户需提供以下信息完成注册：</p>
+            <ul>
+                <li>有效手机号码：手机号码必须是用户本人正在使用且有效的号码，用于接收验证码以及后续的账号安全验证等操作。</li>
+                <li>设置登录密码：密码应包含字母、数字和特殊字符，长度不少于8位，以确保账号的安全性。</li>
+                <li>基本个人信息（昵称、性别等）：昵称用于在平台上展示用户身份，性别等信息有助于我们为用户提供更个性化的服务。</li>
+            </ul>
+
+            <h3>1.2 账户注销</h3>
+            <p>用户如需注销账户，请联系客服进行操作。客服将协助用户完成账户注销流程。</p>
+            <p class="note">注意：注销后将删除所有数据且不可恢复。这包括用户在平台上的所有个人信息、打卡记录、AI分析数据等，一旦注销，将无法再找到这些数据，请用户谨慎操作。</p>
+        </div>
+    </div>
+
+    <div lang="en">
+        <div class="section">
+            <h2>2. Service Usage Rules</h2>
+            <h3>2.1 Check-in Features</h3>
+            <p>Users can check in using the following methods:</p>
+            <ul>
+                <li>Upload food photos (e.g., breakfast, lunch): Users can take photos of their meals and upload them to the platform after each meal.</li>
+                <li>Record exercise data (e.g., running, fitness): Users can connect smart devices (e.g., fitness trackers, smart watches) or manually input their exercise data.</li>
+                <li>Upload weight photos: Users can regularly upload weight photos to track weight changes.</li>
+            </ul>
+
+            <h3>2.2 AI Analysis</h3>
+            <p>AI analysis features include:</p>
+            <ul>
+                <li>Food nutrition identification: The system uses AI to identify food types and nutritional components from uploaded photos.</li>
+                <li>Exercise effect evaluation: Based on recorded exercise data, AI evaluates exercise effectiveness including calories burned and intensity.</li>
+                <li>Weight trend prediction: Combining weight photos with other data, AI predicts weight change trends.</li>
+            </ul>
+            <p class="note">Note: AI analysis results are for reference only and should not be used as medical diagnosis. While our AI analysis provides health suggestions and data references, it cannot replace professional medical diagnosis and advice. Users with health concerns should consult a doctor or health professional.</p>
+        </div>
+    </div>
+
+    <div lang="zh-CN">
+        <div class="section">
+            <h2>二、服务使用规则</h2>
+            <h3>2.1 打卡功能</h3>
+            <p>用户可使用以下方式打卡：</p>
+            <ul>
+                <li>上传食物照片（如早餐、午餐）：用户可以在每天用餐后，拍摄食物照片并上传至平台。</li>
+                <li>记录运动数据（如跑步、健身）：用户可以通过连接智能设备（如运动手环、智能手表等）或手动输入的方式，记录自己的运动数据。</li>
+                <li>上传体重照片：用户可以定期上传体重照片，用于记录体重变化。</li>
+            </ul>
+
+            <h3>2.2 AI分析</h3>
+            <p>AI分析功能包括：</p>
+            <ul>
+                <li>食物营养成分识别：系统将根据用户上传的食物照片，利用AI技术识别食物的种类和营养成分。</li>
+                <li>运动效果评估：根据用户记录的运动数据，AI将评估用户的运动效果，包括消耗的卡路里、运动强度等。</li>
+                <li>体重变化趋势预测：结合用户上传的体重照片和其他相关数据，AI将预测用户的体重变化趋势。</li>
+            </ul>
+            <p class="note">注意：AI分析结果仅供参考，不作为医疗诊断依据。虽然我们的AI分析功能能够提供一定的健康建议和数据参考，但它不能替代专业的医疗诊断和建议。如果用户有任何健康问题或疑虑，应及时咨询医生或专业的健康顾问。</p>
+        </div>
+    </div>
+
+    <div lang="en">
+        <div class="section">
+            <h2>3. Intellectual Property</h2>
+            <p>3.1 All content in this application (including but not limited to software, interface design, algorithms, etc.) is the intellectual property of DingDang Network.</p>
+            <p>3.2 Users must not:</p>
+            <ul>
+                <li>Reverse engineer, decompile or attempt to extract source code: Users must not reverse engineer, decompile or attempt to extract the source code of this application. This is to protect our intellectual property and business secrets, ensuring application security and stability.</li>
+                <li>Copy, modify or distribute application content without authorization: Users must not copy, modify or distribute any content of this application without authorization from DingDang Network. This includes but is not limited to software programs, interface designs, text, images, audio, video, etc.</li>
+                <li>Use the service for commercial purposes: Users must not use the services provided by this application for any commercial purposes without written permission from DingDang Network. This application is designed for personal health management, not as a commercial operation platform.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>4. Dispute Resolution</h2>
+            <p>4.1 This agreement is governed by the laws of the People's Republic of China.</p>
+            <p>4.2 Any disputes should be resolved through friendly negotiation.</p>
+            <p>4.3 If negotiation fails, either party may file a lawsuit with the People's Court where DingDang Network is located. Users should understand and accept this dispute resolution method when using this application.</p>
+        </div>
+
+        <p>For any questions, please contact: banznx@qq.com</p>
+    </div>
+
+    <div lang="zh-CN">
+        <div class="section">
+            <h2>三、知识产权</h2>
+            <p>3.1 本应用所有内容（包括但不限于软件、界面设计、算法等）的知识产权归叮当网络所有。</p>
+            <p>3.2 用户不得：</p>
+            <ul>
+                <li>反向工程、反编译或试图提取源代码：用户不得对本应用进行反向工程、反编译或试图提取其源代码。这是为了保护我们的知识产权和商业机密，确保应用的安全性和稳定性。</li>
+                <li>未经授权复制、修改、传播应用内容：用户不得未经叮当网络的授权，复制、修改或传播本应用的任何内容。这包括但不限于软件程序、界面设计、文本、图像、音频、视频等。</li>
+                <li>将本服务用于商业用途：用户不得将本应用提供的服务用于任何商业目的，除非获得叮当网络的书面许可。本应用旨在为用户提供个人健康管理服务，而非商业运营平台。</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>四、争议解决</h2>
+            <p>4.1 本协议适用中华人民共和国法律。</p>
+            <p>4.2 如发生争议，双方应友好协商解决。</p>
+            <p>4.3 协商不成的，任何一方可向叮当网络所在地人民法院提起诉讼。用户在使用本应用时应了解并接受此争议解决方式。</p>
+        </div>
+
+        <p>如有疑问，请联系：banznx@qq.com</p>
+    </div>
+</body>
+</html>

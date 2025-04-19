@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>食物详情 - 营养怪博士</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 40px 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin: 0 20px;
+        }
+        .food-image {
+            position: relative;
+            margin-bottom: 30px;
+            overflow: hidden;
+            border-radius: 12px;
+        }
+        .food-image img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            transition: all 0.3s ease;
+        }
+        .food-image:hover img {
+            transform: scale(1.02);
+            box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+        }
+        .image-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0,0,0,0.7);
+            color: white;
+            padding: 12px 20px;
+            font-size: 14px;
+            text-align: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .food-image:hover .image-caption {
+            opacity: 1;
+        }
+        .footer {
+            margin-top: 40px;
+            padding: 20px;
+            text-align: center;
+            color: #666;
+            font-size: 14px;
+            border-top: 1px solid #eee;
+        }
+        h1, h2 {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+        li {
+            margin: 8px 0;
+        }
+        .nutrition-section {
+            background: #ecf0f1;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        .nutrition-section h3 {
+            color: #e67e22;
+            margin-top: 0;
+        }
+        .food-item {
+            margin: 20px 0;
+            padding: 15px;
+            border-left: 4px solid #3498db;
+            background: #f8f9fa;
+        }
+        .food-item h4 {
+            color: #34495e;
+            margin-top: 0;
+        }
+        .food-details {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 10px;
+            margin-top: 10px;
+        }
+        .food-detail {
+            background: white;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        hr {
+            border: 0;
+            height: 1px;
+            background: #ddd;
+            margin: 20px 0;
+        }
+        @media (max-width: 768px) {
+            body {
+                padding: 30px 15px;
+                margin: 15px auto;
+            }
+            .container {
+                padding: 30px;
+                margin: 0 15px;
+            }
+            .food-image img {
+                height: 250px;
+            }
+            .food-details {
+                grid-template-columns: 1fr;
+            }
+            .nutrition-section, .food-item {
+                margin: 10px 0;
+                padding: 10px;
+            }
+        }
+        @media (max-width: 480px) {
+            body {
+                padding: 20px 10px;
+                margin: 10px auto;
+            }
+            .container {
+                padding: 20px;
+                margin: 0 10px;
+            }
+            .food-image img {
+                height: 200px;
+            }
+            h1 {
+                font-size: 1.5rem;
+            }
+            h2 {
+                font-size: 1.3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        {% if image %}
+        <div class="food-image">
+            <img src="{{ image }}" alt="食物图片">
+            <div class="image-caption">点击图片查看详情</div>
+        </div>
+        {% endif %}
+        {{html | safe}}
+    </div>
+    <div class="footer">
+        <p>叮当网络@ddddnet.top</p>
+        <p>小程序©叮当食光机</p>
+    </div>
+    <script>
+        // 自动修复未正确转换的列表
+        document.querySelectorAll('p').forEach(p => {
+            if (p.innerHTML.startsWith('-')) {
+                const ul = document.createElement('ul');
+                p.innerHTML.split('<br>').forEach(line => {
+                    if (line.trim()) {
+                        const li = document.createElement('li');
+                        li.innerHTML = line.replace(/^- /, '').trim();
+                        ul.appendChild(li);
+                    }
+                });
+                p.replaceWith(ul);
+            }
+        });
+    </script>
+</body>
+</html>
