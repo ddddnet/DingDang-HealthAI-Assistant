@@ -2,7 +2,7 @@
 
 ## 📖 简介
 这是一款通过AI来帮助用户分析健康状态的程序，旨在助力用户科学减肥与健康管理。✨
-
+https://github.com/ddddnet/DingDang-HealthAI-Assistant
 ## 📱 叮当食光机小程序体验
 ![gh_065305e48bcf_258.jpg](https://img.picui.cn/free/2025/04/19/680399ecc9bd3.jpg)
 ### 📸 小程序截图
